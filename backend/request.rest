@@ -1,0 +1,149 @@
+//Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "ganteng",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// get all users
+
+GET http://localhost:5000/users
+
+###
+// get user by id
+GET http://localhost:5000/users/0302218a-c2fc-48a5-bcdd-8a551bb517d3
+
+###
+// update users
+PATCH http://localhost:5000/users/0302218a-c2fc-48a5-bcdd-8a551bb517d3
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "email": "admin@example.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+
+###
+//delete user
+DELETE http://localhost:5000/users/0302218a-c2fc-48a5-bcdd-8a551bb517d3
+
+###
+//login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "123456"
+}
+
+###
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "user@user.com",
+    "password": "123123"
+}
+
+###
+// me
+GET http://localhost:5000/me
+
+###
+//Logout
+DELETE http://localhost:5000/logout
+
+
+###
+// get all products
+
+GET http://localhost:5000/products
+
+###
+// get all products
+
+GET http://localhost:5000/productsall
+
+###
+// get single products
+
+GET http://localhost:5000/products/cf59c7bc-33a7-4e87-9dee-a24f28d69baf
+
+###
+//Create a products
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "lampu baru",
+    "price": 2000,
+    "stock": 0
+}
+
+###
+//update a product
+PATCH http://localhost:5000/products/cf59c7bc-33a7-4e87-9dee-a24f28d69baf
+Content-Type: application/json
+
+{
+    
+    "stock": 100
+
+}
+
+###
+//del a product
+DELETE http://localhost:5000/products/11505b9b-b134-4da5-8792-8f81bad43c79
+
+###
+//Create a transaction
+POST http://localhost:5000/transactions
+Content-Type: application/json
+
+{
+    "quantity": 321,
+    "type": 0,
+    "productId": 1
+}
+
+###
+//insert update a transaction
+PATCH http://localhost:5000/transactionsiu/6320231199
+Content-Type: application/json
+
+{
+    "quantity": 3212,
+    "type": 0,
+    "productId": 1
+}
+
+###
+// get all transaction
+
+GET http://localhost:5000/transactions
+
+###
+// get all transaction by trx
+
+GET http://localhost:5000/transactions/trx/1
+
+###
+//update a product
+PATCH http://localhost:5000/transactions/0d7a5f1a-215e-4a52-831f-1dda1a55a608
+Content-Type: application/json
+
+{
+    "quantity": 32,
+    "type": 32144
+}
